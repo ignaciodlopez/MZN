@@ -399,6 +399,15 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 .navbar-header {
     padding: 17px 0;
 }
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-fixed-top .navbar-brand img {
+    max-height: 45px;
+}
 .navbar-header .brand{
     font-size: 25px;
     color: #333;
