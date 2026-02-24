@@ -519,13 +519,25 @@ ul.nav > li > a.active{
    Hero Section
    ========================================================================== */
 .hero-section{
-    background-image: url(../img/hero-background.jpg);
+    background-image: url('../img/hero-background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 100%;
     height: 100vh;
     position: relative;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+.hero-section .container {
+    position: relative;
+    z-index: 1;
 }
 .hero-content h1{
     font-size: 80px;
@@ -615,12 +627,25 @@ ul.nav > li > a.active{
    Service Section
    ========================================================================== */
 .service-section{
-    background-image: url(../img/services-background.jpg);
+    background-image: url('../img/services-background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 100%;
     height: 100%;
+    position: relative;
+}
+.service-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+.service-section .container {
+    position: relative;
+    z-index: 1;
 }
 .service-section .section-heading p{
     color: #ddd;
