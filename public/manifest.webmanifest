@@ -1,0 +1,17 @@
+{
+  "name": "Cristian Marzano — Portfolio audiovisual",
+  "short_name": "C. Marzano",
+  "description": "Portfolio de dirección audiovisual, videoclips, publicidad, edición y fotografía.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#030303",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

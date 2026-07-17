@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="PLACEHOLDER">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#181818"/>
+    </linearGradient>
+    <radialGradient id="l" cx="0.7" cy="0.25" r="0.9">
+      <stop offset="0" stop-color="#444444" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#444444" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#l)"/>
+  <rect width="1600" height="900" filter="url(#n)"/>
+  <rect x="66" y="66" width="1468" height="768" fill="none" stroke="rgba(242,240,234,0.14)" stroke-width="2"/>
+  <text x="66" y="801" font-family="Arial, sans-serif" font-size="47" letter-spacing="6" fill="rgba(242,240,234,0.55)">PLACEHOLDER</text>
+</svg>

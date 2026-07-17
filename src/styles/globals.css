@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Sans (Fontshare, licencia ITF gratuita) servida localmente desde src/assets/fonts. */
+@font-face {
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/general-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/general-sans-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/general-sans-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/general-sans-700.woff2") format("woff2");
+}
+
+:root {
+  --color-background: #030303;
+  --color-background-soft: #0a0a0a;
+  --color-surface: #121212;
+  --color-foreground: #f4f1eb;
+  --color-muted: #8b857c;
+  --color-border: rgba(244, 241, 235, 0.12);
+  --color-border-strong: rgba(244, 241, 235, 0.23);
+  --color-accent: #f4f1eb;
+  --color-error: #ff6b6b;
+  --color-success: #83dc9b;
+
+  --font-body: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "General Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Cormorant Variable", Georgia, serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  /* Fallback nativo para anclas cuando Lenis está desactivado. */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-background font-body text-foreground antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  img.h-full,
+  video.h-full {
+    height: 100%;
+  }
+}
+
+/* Estilos recomendados por Lenis. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* El cursor nativo solo se oculta cuando el cursor personalizado está activo (vía JS). */
+.custom-cursor-active,
+.custom-cursor-active * {
+  cursor: none;
+}
+
+.custom-cursor-active :is(input, textarea, select) {
+  cursor: auto;
+}
